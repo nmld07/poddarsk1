@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Поддарск | Умный город будущего</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- PWA мета-теги -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#2c5530">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Поддарск">
+    <link rel="apple-touch-icon" href="icon-192.png">
+
+    <!-- Viewport для мобильных -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <!-- Предотвращение кэширования проблем -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+</head>
+
+<body>
+    <!-- Шапка -->
+    <header>
+        <nav class="navbar">
+            <div class="nav-brand">
+                <span>🌱 Поддарск</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Главная</a></li>
+                <li><a href="#about">Философия</a></li>
+                <li><a href="#projects">Проекты</a></li>
+                <li><a href="#founders">Стать частью</a></li>
+                <li><a href="#" class="login-btn" id="loginBtn">Вход для жителей</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Главный экран -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Поддарск</h1>
+            <p class="hero-subtitle">Город, который думает о завтра</p>
+            <p class="hero-description">Первая в России экосистема, где технологии служат человеку и природе</p>
+            <div class="hero-buttons">
+                <button class="cta-button primary" onclick="scrollToSection('about')">Узнать больше</button>
+                <button class="cta-button secondary" onclick="scrollToSection('founders')">Присоединиться</button>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse"></div>
+        </div>
+    </section>
+
+    <!-- Философия -->
+    <section id="about" class="philosophy">
+        <div class="container">
+            <h2 class="section-title">Наша философия</h2>
+            <div class="philosophy-grid">
+                <div class="philosophy-card">
+                    <div class="card-icon">🧠</div>
+                    <h3>Интеллект в основе</h3>
+                    <p>Каждое решение принимается на основе данных и экспертизы. От планирования районов до управления
+                        ресурсами.</p>
+                </div>
+                <div class="philosophy-card">
+                    <div class="card-icon">♻️</div>
+                    <h3>Замкнутый цикл</h3>
+                    <p>Ноль отходов — 100% переработка. Энергия от возобновляемых источников, вода в активном
+                        использовании.
+                    </p>
+                </div>
+                <div class="philosophy-card">
+                    <div class="card-icon">👥</div>
+                    <h3>Сообщество</h3>
+                    <p>Жители участвуют в управлении через цифровые платформы. Каждый голос важен, каждая идея ценна.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Текущие проекты -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Текущие проекты</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>ОНТ "Поддарск"</h3>
+                    <p>Особая научная территория — ядро будущего города. Исследования в области умных городов, экологии
+                        и AI.</p>
+                    <div class="project-status">
+                        <span class="status planning">Планирование</span>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <h3>Цифровая инфраструктура</h3>
+                    <p>Разработка единой операционной системы города: от управления ЖКХ до умного транспорта.</p>
+                    <div class="project-status">
+                        <span class="status development">Разработка</span>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <h3>Эко-ферма</h3>
+                    <p>Вертикальные фермы и системы переработки отходов в плодородную почву.</p>
+                    <div class="project-status">
+                        <span class="status research">Исследования</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Стать частью -->
+    <section id="founders" class="founders">
+        <div class="container">
+            <h2 class="section-title">Стать частью проекта</h2>
+            <div class="founders-content">
+                <div class="founders-text">
+                    <p>Мы ищем единомышленников: инженеров, экологов, урбанистов, IT-специалистов и всех, кто верит в
+                        города будущего.</p>
+                    <ul class="benefits-list">
+                        <li>🎯 Участие в проекте с нуля</li>
+                        <li>🏠 Приоритет на получение жилья</li>
+                        <li>💼 Работа в инновационных проектах</li>
+                        <li>🌱 Жизнь в гармонии с природой</li>
+                    </ul>
+                </div>
+                <form class="founder-form">
+                    <h3>Оставить заявку</h3>
+                    <input type="text" placeholder="Ваше имя" required>
+                    <input type="email" placeholder="E-mail" required>
+                    <select required>
+                        <option value="">Выберите роль</option>
+                        <option value="developer">Разработчик</option>
+                        <option value="scientist">Ученый/Исследователь</option>
+                        <option value="designer">Дизайнер/Архитектор</option>
+                        <option value="investor">Инвестор</option>
+                        <option value="other">Другое</option>
+                    </select>
+                    <textarea placeholder="Расскажите о своих навыках и почему хотите присоединиться..."
+                        rows="4"></textarea>
+                    <button type="submit">Отправить заявку</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Модальное окно входа -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Вход в систему жителя</h2>
+            <form class="login-form" id="residentLogin">
+                <div class="input-group">
+                    <label>ID жителя</label>
+                    <input type="text" placeholder="PD-0000" required>
+                </div>
+                <div class="input-group">
+                    <label>Пароль</label>
+                    <input type="password" placeholder="••••••••" required>
+                </div>
+                <button type="submit" class="login-submit">Войти в систему</button>
+            </form>
+            <div class="login-help">
+                <p>Еще не зарегистрированы? <a href="#" id="registerLink">Получить ID жителя</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Подвал -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Поддарск</h3>
+                    <p>Строим будущее вместе</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Контакты</h4>
+                    <p>contact@poddarsk.ru</p>
+                    <p>Арск, Татарстан</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Присоединиться</h4>
+                    <a href="#founders">Стать частью проекта</a>
+                    <a href="#">Карьера в Поддарске</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Проект "Поддарск". Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+    <script>
+        // ОСНОВНОЙ КОД ПРИЛОЖЕНИЯ
+        console.log('Сайт Поддарск загружен!');
+
+        // База данных пользователей (в реальном приложении это было бы на сервере)
+        const usersDatabase = {
+            // Администратор
+            'admin': {
+                password: 'BLMEt2023!',
+                role: 'admin',
+                name: 'Администратор Системы'
+            },
+            // Обычные жители
+            'PD-0001': {
+                password: 'pass123',
+                role: 'resident',
+                name: 'Иван Петров'
+            },
+            'PD-0002': {
+                password: 'pass123',
+                role: 'resident',
+                name: 'Мария Сидорова'
+            }
+        };
+
+        // Функция для генерации нового ID жителя
+        function generateResidentId() {
+            const usedIds = Object.keys(usersDatabase);
+            let newId;
+            do {
+                const randomNum = Math.floor(Math.random() * 9000) + 1000;
+                newId = `PD-${randomNum}`;
+            } while (usedIds.includes(newId));
+            return newId;
+        }
+
+        // Плавная прокрутка
+        document.querySelectorAll('a[href^="#"]').forEach(link => {
+            link.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+
+                const targetSection = document.querySelector(targetId);
+                if (targetSection) {
+                    const offsetTop = targetSection.offsetTop - 80;
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Модальное окно входа
+        const loginBtn = document.getElementById('loginBtn');
+        const modal = document.getElementById('loginModal');
+        const closeBtn = document.querySelector('.close-btn');
+        const loginForm = document.getElementById('residentLogin');
+        const registerLink = document.getElementById('registerLink');
+
+        // Открытие модального окна
+        if (loginBtn) {
+            loginBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                console.log('Кнопка входа нажата!');
+                if (modal) {
+                    modal.style.display = 'block';
+                    document.body.style.overflow = 'hidden';
+                }
+            });
+        }
+
+        // Закрытие модального окна
+        if (closeBtn) {
+            closeBtn.addEventListener('click', () => {
+                if (modal) {
+                    modal.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                }
+            });
+        }
+
+        // Закрытие по клику вне окна
+        window.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // Регистрация нового жителя
+        if (registerLink) {
+            registerLink.addEventListener('click', (e) => {
+                e.preventDefault();
+                showRegistrationForm();
+            });
+        }
+
+        // Показать форму регистрации
+        function showRegistrationForm() {
+            const newId = generateResidentId();
+            const registrationHTML = `
+        <div class="registration-form">
+            <h3>🎉 Получить ID жителя</h3>
+            <p>Ваш новый ID: <strong>${newId}</strong></p>
+            <div class="input-group">
+                <label>Ваше имя</label>
+                <input type="text" id="userName" placeholder="Введите ваше имя" required>
+            </div>
+            <div class="input-group">
+                <label>Придумайте пароль</label>
+                <input type="password" id="userPassword" placeholder="Минимум 6 символов" required>
+            </div>
+            <div class="form-buttons">
+                <button type="button" onclick="registerNewUser('${newId}')" class="register-btn">Зарегистрироваться</button>
+                <button type="button" onclick="showLoginForm()" class="back-login-btn">Назад ко входу</button>
+            </div>
+        </div>
+    `;
+
+            document.querySelector('.modal-content').innerHTML = registrationHTML;
+        }
+
+        // Вернуться к форме входа
+        function showLoginForm() {
+            const loginHTML = `
+        <span class="close-btn">&times;</span>
+        <h2>Вход в систему жителя</h2>
+        <form class="login-form" id="residentLogin">
+            <div class="input-group">
+                <label>ID жителя</label>
+                <input type="text" placeholder="PD-0000 или admin" required>
+            </div>
+            <div class="input-group">
+                <label>Пароль</label>
+                <input type="password" placeholder="••••••••" required>
+            </div>
+            <button type="submit" class="login-submit">Войти в систему</button>
+        </form>
+        <div class="login-help">
+            <p>Еще не зарегистрированы? <a href="#" id="registerLink">Получить ID жителя</a></p>
+            <p class="demo-info">
+                <strong>Демо-доступ:</strong><br>
+                Админ: admin / admin123<br>
+                Житель: PD-0001 / pass123
+            </p>
+        </div>
+    `;
+
+            document.querySelector('.modal-content').innerHTML = loginHTML;
+            // Перепривязываем события
+            initModalEvents();
+        }
+
+        // Регистрация нового пользователя
+        function registerNewUser(userId) {
+            const userName = document.getElementById('userName').value;
+            const userPassword = document.getElementById('userPassword').value;
+
+            if (!userName || !userPassword) {
+                alert('Пожалуйста, заполните все поля');
+                return;
+            }
+
+            if (userPassword.length < 6) {
+                alert('Пароль должен содержать минимум 6 символов');
+                return;
+            }
+
+            // Добавляем нового пользователя в базу
+            usersDatabase[userId] = {
+                password: userPassword,
+                role: 'resident',
+                name: userName
+            };
+
+            alert(`🎉 Регистрация успешна!\n\nВаш ID: ${userId}\nПароль: ${userPassword}\n\nЗапомните эти данные для входа!`);
+            showLoginForm();
+        }
+
+        // Обработка формы входа
+        function initModalEvents() {
+            const loginForm = document.getElementById('residentLogin');
+            const registerLink = document.getElementById('registerLink');
+
+            if (loginForm) {
+                loginForm.addEventListener('submit', function (e) {
+                    e.preventDefault();
+
+                    const userId = this.querySelector('input[type="text"]').value;
+                    const password = this.querySelector('input[type="password"]').value;
+
+                    // Показываем индикатор загрузки
+                    const submitBtn = this.querySelector('.login-submit');
+                    const originalText = submitBtn.textContent;
+                    submitBtn.textContent = 'Вход в систему...';
+                    submitBtn.disabled = true;
+
+                    // Имитация задержки сети
+                    setTimeout(() => {
+                        handleLogin(userId, password);
+
+                        // Восстанавливаем кнопку
+                        submitBtn.textContent = originalText;
+                        submitBtn.disabled = false;
+                    }, 1000);
+                });
+            }
+
+            if (registerLink) {
+                registerLink.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    showRegistrationForm();
+                });
+            }
+        }
+
+        // Обработка логина
+        function handleLogin(userId, password) {
+            console.log('Попытка входа:', { userId, password });
+
+            const user = usersDatabase[userId];
+
+            if (user && user.password === password) {
+                console.log('Вход успешен!');
+
+                if (user.role === 'admin') {
+                    // Вход для администратора
+                    createAdminPage(user);
+                } else {
+                    // Вход для обычного жителя
+                    createServicesPage(user);
+                }
+            } else {
+                alert('❌ Ошибка входа!\nПроверьте ID и пароль');
+                console.log('Ошибка: неверные данные');
+            }
+        }
+
+        // Панель администратора
+        function createAdminPage(adminUser) {
+            console.log('Создание панели администратора...');
+
+            // Скрываем модальное окно
+            const modal = document.getElementById('loginModal');
+            if (modal) {
+                modal.style.display = 'none';
+            }
+            document.body.style.overflow = 'auto';
+
+            // Собираем статистику
+            const residents = Object.values(usersDatabase).filter(user => user.role === 'resident');
+
+            const adminHTML = `
+        <div class="admin-page">
+            <div class="admin-header">
+                <button onclick="closeAdminPage()" class="back-btn">← Назад</button>
+                <h1>👑 Панель администратора</h1>
+                <p>Добро пожаловать, ${adminUser.name}!</p>
+            </div>
+            
+            <div class="admin-stats">
+                <div class="stat-card">
+                    <div class="stat-number">${residents.length}</div>
+                    <div class="stat-label">Зарегистрированных жителей</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">${Object.keys(usersDatabase).length}</div>
+                    <div class="stat-label">Всего пользователей</div>
+                </div>
+            </div>
+            
+            <div class="admin-section">
+                <h2>📊 Управление жителями</h2>
+                <div class="residents-list">
+                    ${residents.map(user => `
+                        <div class="resident-card">
+                            <div class="resident-info">
+                                <strong>${user.name}</strong>
+                                <span class="resident-id">ID: ${Object.keys(usersDatabase).find(key => usersDatabase[key] === user)}</span>
+                            </div>
+                            <div class="resident-actions">
+                                <button class="btn-small" onclick="editResident('${Object.keys(usersDatabase).find(key => usersDatabase[key] === user)}')">✏️</button>
+                                <button class="btn-small btn-danger" onclick="deleteResident('${Object.keys(usersDatabase).find(key => usersDatabase[key] === user)}')">🗑️</button>
+                            </div>
+                        </div>
+                    `).join('')}
+                </div>
+            </div>
+            
+            <div class="admin-section">
+                <h2>⚙️ Системные действия</h2>
+                <div class="admin-actions">
+                    <button class="admin-btn" onclick="addNewResident()">➕ Добавить жителя</button>
+                    <button class="admin-btn" onclick="showSystemStats()">📈 Статистика системы</button>
+                    <button class="admin-btn" onclick="showDatabase()">👁️ Просмотр базы данных</button>
+                </div>
+            </div>
+        </div>
+    `;
+
+            // Стили для админки
+            const adminStyles = `
+        <style>
+            .admin-page {
+                min-height: 100vh;
+                background: linear-gradient(135deg, #2c5530 0%, #1e3a23 100%);
+                color: white;
+                padding: 80px 20px 40px;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
+            
+            .admin-header {
+                text-align: center;
+                margin-bottom: 3rem;
+                position: relative;
+            }
+            
+            .back-btn {
+                position: absolute;
+                left: 20px;
+                top: 0;
+                background: rgba(255,255,255,0.2);
+                border: none;
+                color: white;
+                padding: 10px 20px;
+                border-radius: 25px;
+                cursor: pointer;
+                backdrop-filter: blur(10px);
+                font-size: 16px;
+            }
+            
+            .admin-stats {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                gap: 1rem;
+                margin-bottom: 3rem;
+                max-width: 1200px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            
+            .stat-card {
+                background: rgba(255,255,255,0.1);
+                padding: 2rem;
+                border-radius: 15px;
+                text-align: center;
+                backdrop-filter: blur(10px);
+            }
+            
+            .stat-number {
+                font-size: 3rem;
+                font-weight: bold;
+                margin-bottom: 0.5rem;
+            }
+            
+            .admin-section {
+                max-width: 1200px;
+                margin: 0 auto 3rem;
+                background: rgba(255,255,255,0.1);
+                padding: 2rem;
+                border-radius: 15px;
+                backdrop-filter: blur(10px);
+            }
+            
+            .residents-list {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .resident-card {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 1rem;
+                background: rgba(255,255,255,0.05);
+                border-radius: 10px;
+            }
+            
+            .resident-id {
+                font-size: 0.9rem;
+                opacity: 0.8;
+            }
+            
+            .btn-small {
+                background: rgba(255,255,255,0.2);
+                border: none;
+                color: white;
+                padding: 5px 10px;
+                border-radius: 5px;
+                cursor: pointer;
+                margin-left: 0.5rem;
+            }
+            
+            .btn-danger {
+                background: rgba(255,0,0,0.3);
+            }
+            
+            .admin-actions {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 1rem;
+            }
+            
+            .admin-btn {
+                background: rgba(255,255,255,0.15);
+                border: 1px solid rgba(255,255,255,0.3);
+                color: white;
+                padding: 1rem;
+                border-radius: 10px;
+                cursor: pointer;
+                font-size: 1rem;
+                transition: all 0.3s;
+            }
+            
+            .admin-btn:hover {
+                background: rgba(255,255,255,0.25);
+                transform: translateY(-2px);
+            }
+        </style>
+    `;
+
+            // Заменяем содержимое страницы
+            document.body.innerHTML = adminStyles + adminHTML;
+        }
+
+        // Обновленная функция создания страницы услуг (для жителей)
+        function createServicesPage(user) {
+            console.log('Создание страницы услуг для:', user.name);
+
+            // Скрываем модальное окно
+            const modal = document.getElementById('loginModal');
+            if (modal) {
+                modal.style.display = 'none';
+            }
+            document.body.style.overflow = 'auto';
+
+            // Создаем HTML для страницы услуг
+            const servicesHTML = `
+        <div class="services-page">
+            <div class="services-header">
+                <button onclick="closeServicesPage()" class="back-btn">← Выйти</button>
+                <h1>Умные услуги Поддарска</h1>
+                <p>Добро пожаловать, ${user.name}!</p>
+            </div>
+            
+            <div class="user-info-panel">
+                <div class="user-welcome">
+                    <h3>👋 ${user.name}</h3>
+                    <p>ID: ${Object.keys(usersDatabase).find(key => usersDatabase[key] === user)}</p>
+                </div>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card" onclick="openService('transport')">
+                    <div class="service-icon">🚗</div>
+                    <h3>Умный транспорт</h3>
+                    <p>Роботы-такси, каршеринг, планирование маршрутов</p>
+                    <div class="service-status active">Доступно</div>
+                </div>
+                
+                <div class="service-card" onclick="openService('delivery')">
+                    <div class="service-icon">🤖</div>
+                    <h3>Роботы-доставщики</h3>
+                    <p>Доставка еды, товаров и вывоз мусора</p>
+                    <div class="service-status active">Доступно</div>
+                </div>
+                
+                <div class="service-card" onclick="openService('energy')">
+                    <div class="service-icon">⚡</div>
+                    <h3>Умная энергия</h3>
+                    <p>Мониторинг потребления, умные сети</p>
+                    <div class="service-status development">Скоро</div>
+                </div>
+                
+                <div class="service-card" onclick="openService('health')">
+                    <div class="service-icon">🏥</div>
+                    <h3>Цифровое здоровье</h3>
+                    <p>Телемедицина, мониторинг здоровья</p>
+                    <div class="service-status planning">В планах</div>
+                </div>
+                
+                <div class="service-card" onclick="openService('gov')">
+                    <div class="service-icon">🏛️</div>
+                    <h3>Электронное правительство</h3>
+                    <p>Голосования, услуги, обратная связь</p>
+                    <div class="service-status active">Доступно</div>
+                </div>
+                
+                <div class="service-card" onclick="openService('eco')">
+                    <div class="service-icon">🌿</div>
+                    <h3>Эко-мониторинг</h3>
+                    <p>Качество воздуха, переработка отходов</p>
+                    <div class="service-status active">Доступно</div>
+                </div>
+            </div>
+            
+            <div class="user-panel">
+                <div class="user-info">
+                    <h3>Ваш экологический след</h3>
+                    <div class="eco-stats">
+                        <div class="eco-stat">
+                            <span class="stat-value">85%</span>
+                            <span class="stat-label">Переработка</span>
+                        </div>
+                        <div class="eco-stat">
+                            <span class="stat-value">12 kW</span>
+                            <span class="stat-label">Энергия сегодня</span>
+                        </div>
+                        <div class="eco-stat">
+                            <span class="stat-value">2.1 L</span>
+                            <span class="stat-label">Вода сэкономлена</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    `;
+
+            // Стили для страницы услуг (остаются те же)
+            const servicesStyles = `
+        <style>
+            .services-page {
+                min-height: 100vh;
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                color: white;
+                padding: 80px 20px 40px;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
+            
+            .services-header {
+                text-align: center;
+                margin-bottom: 2rem;
+                position: relative;
+            }
+            
+            .back-btn {
+                position: absolute;
+                left: 20px;
+                top: 0;
+                background: rgba(255,255,255,0.2);
+                border: none;
+                color: white;
+                padding: 10px 20px;
+                border-radius: 25px;
+                cursor: pointer;
+                backdrop-filter: blur(10px);
+                font-size: 16px;
+            }
+            
+            .user-info-panel {
+                max-width: 1200px;
+                margin: 0 auto 2rem;
+                background: rgba(255,255,255,0.1);
+                padding: 1.5rem;
+                border-radius: 15px;
+                backdrop-filter: blur(10px);
+            }
+            
+            .user-welcome h3 {
+                margin: 0 0 0.5rem 0;
+                font-size: 1.4rem;
+            }
+            
+            /* Остальные стили такие же как раньше */
+            .services-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 2rem;
+                max-width: 1200px;
+                margin: 0 auto 3rem;
+                padding: 0 20px;
+            }
+            
+            .service-card {
+                background: rgba(255,255,255,0.1);
+                padding: 2rem;
+                border-radius: 20px;
+                backdrop-filter: blur(10px);
+                border: 1px solid rgba(255,255,255,0.2);
+                cursor: pointer;
+                transition: all 0.3s ease;
+            }
+            
+            .service-card:hover {
+                transform: translateY(-5px);
+                background: rgba(255,255,255,0.15);
+            }
+            
+            .service-icon {
+                font-size: 3rem;
+                margin-bottom: 1rem;
+            }
+            
+            .service-card h3 {
+                font-size: 1.4rem;
+                margin-bottom: 1rem;
+            }
+            
+            .service-status {
+                display: inline-block;
+                padding: 0.5rem 1rem;
+                border-radius: 15px;
+                font-size: 0.8rem;
+                font-weight: 600;
+                margin-top: 1rem;
+            }
+            
+            .service-status.active {
+                background: #4CAF50;
+            }
+            
+            .service-status.development {
+                background: #FF9800;
+            }
+            
+            .service-status.planning {
+                background: #9E9E9E;
+            }
+            
+            .user-panel {
+                max-width: 1200px;
+                margin: 0 auto;
+                background: rgba(255,255,255,0.1);
+                padding: 2rem;
+                border-radius: 20px;
+                backdrop-filter: blur(10px);
+            }
+            
+            .eco-stats {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+                gap: 1rem;
+                margin-top: 1rem;
+            }
+            
+            .eco-stat {
+                text-align: center;
+                padding: 1rem;
+                background: rgba(255,255,255,0.1);
+                border-radius: 10px;
+            }
+            
+            .stat-value {
+                display: block;
+                font-size: 1.5rem;
+                font-weight: bold;
+                margin-bottom: 0.5rem;
+            }
+        </style>
+    `;
+
+            // Заменяем содержимое страницы
+            document.body.innerHTML = servicesStyles + servicesHTML;
+        }
+
+        // Функции для админки
+        function closeAdminPage() {
+            window.location.reload();
+        }
+
+        function addNewResident() {
+            alert('Функция "Добавить жителя" будет реализована в следующей версии');
+        }
+
+        function showSystemStats() {
+            alert('Статистика системы:\n\n' +
+                `Всего пользователей: ${Object.keys(usersDatabase).length}\n` +
+                `Жителей: ${Object.values(usersDatabase).filter(user => user.role === 'resident').length}\n` +
+                `Администраторов: ${Object.values(usersDatabase).filter(user => user.role === 'admin').length}`);
+        }
+
+        function showDatabase() {
+            alert('Текущая база данных:\n\n' +
+                JSON.stringify(usersDatabase, null, 2));
+        }
+
+        function editResident(userId) {
+            alert(`Редактирование жителя: ${userId}\n\nЭта функция будет в следующем обновлении`);
+        }
+
+        function deleteResident(userId) {
+            if (confirm(`Удалить жителя ${userId}?`)) {
+                delete usersDatabase[userId];
+                alert('Житель удален!');
+                closeAdminPage();
+            }
+        }
+
+        // Глобальные функции для кнопок
+        window.closeServicesPage = function () {
+            window.location.reload();
+        };
+
+        window.openService = function (serviceName) {
+            alert('Открывается сервис: ' + serviceName + '\nВ реальном приложении здесь будет переход к конкретному сервису');
+        };
+
+        // Инициализация событий модального окна
+        initModalEvents();
+
+        // Обработка формы "Стать частью"
+        const founderForm = document.querySelector('.founder-form');
+        if (founderForm) {
+            founderForm.addEventListener('submit', function (e) {
+                e.preventDefault();
+                alert('Спасибо за вашу заявку! Мы свяжемся с вами в ближайшее время.');
+                this.reset();
+            });
+        }
+
+        // Анимации при скролле
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.1 });
+
+        // Наблюдаем за карточками
+        document.querySelectorAll('.philosophy-card, .project-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(card);
+        });
+
+        console.log('Все скрипты загружены и готовы к работе!');
+        console.log('Демо-доступ:\nАдмин: admin / admin123\nЖитель: PD-0001 / pass123');
+    </script>
